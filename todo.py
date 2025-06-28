@@ -1,14 +1,15 @@
 def adicionar_tarefa(tarefas, descricao):
-    """
-    Adiciona uma nova tarefa à lista.
-    Uma tarefa é um dicionário com 'descricao' e 'concluida'.
-    """
-    if descricao:  # Garante que a descrição não está vazia
-        nova_tarefa = {"descricao": descricao, "concluida": False}
+    if descricao:
+        nova_tarefa = {
+            "descricao": descricao,
+            "concluida": False,
+            "prioridade": "Baixa"  # novo campo adicionado
+        }
         tarefas.append(nova_tarefa)
-        print(f"\n✅ Tarefa '{descricao}' adicionada com sucesso!")
+        print(f"\n Tarefa '{descricao}' adicionada com sucesso!")
     else:
-        print("\n❌ A descrição da tarefa não pode ser vazia.")
+        print("\n A descrição da tarefa não pode ser vazia.")
+
 
 def listar_tarefas(tarefas):
     """Lista todas as tarefas, mostrando o status (concluída ou pendente)."""
