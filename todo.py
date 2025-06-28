@@ -44,6 +44,31 @@ def remover_tarefa(tarefas, indice):
     else:
         print("\n❌ Índice inválido. Por favor, escolha um número da lista.")
 
+def editar_tarefa(tarefas):
+    """
+    Permite ao usuário editar a descrição de uma tarefa existente.
+    """
+    if not tarefas:
+        print("Nenhuma tarefa para editar.")
+        return
+
+    listar_tarefas(tarefas)  # Mostra as tarefas com seus índices
+
+    try:
+        indice = int(input("Digite o número da tarefa que deseja editar: ")) - 1
+        if 0 <= indice < len(tarefas):
+            print(f"Descrição atual: {tarefas[indice]['descricao']}")
+            nova_descricao = input("Digite a nova descrição: ").strip()
+            if nova_descricao:
+                tarefas[indice]['descricao'] = nova_descricao
+                print("Descrição atualizada com sucesso!")
+            else:
+                print("A descrição não pode ser vazia. Edição cancelada.")
+        else:
+            print("Índice inválido. Nenhuma tarefa editada.")
+    except ValueError:
+        print("Entrada inválida. Por favor, digite um número.")
+
 def exibir_menu():
     print("\n---------------------")
     print("     MENU DE OPÇÕES   ")
