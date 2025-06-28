@@ -18,7 +18,7 @@ def listar_tarefas(tarefas):
     else:
         for i, tarefa in enumerate(tarefas):
             status = "✅" if tarefa["concluida"] else "◻️"
-            prioridade = tarefa["prioridade"]
+            prioridade = tarefa.get("prioridade", "Baixa")  
             print(f"{i + 1}. {status} {tarefa['descricao']} [Prioridade: {prioridade}]")
     print("--------------------------")
     
