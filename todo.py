@@ -77,6 +77,7 @@ def exibir_menu():
     print("2  Listar Tarefas")
     print("3  Marcar como Concluída")
     print("4  Remover Tarefa")
+    print("5  Editar Tarefa")
     print("0  Sair")
     print("----------------------")
 
@@ -109,6 +110,8 @@ def main():
                 indice = int(input("Digite o número da tarefa para remover: "))
                 remover_tarefa(lista_de_tarefas, indice)
             except ValueError:
+        elif opcao == "5":
+            editar_tarefa(tarefas)
                 print("\n❌ Entrada inválida. Por favor, digite um número.")
         elif escolha == '0':
             print("\nObrigado por usar o Gerenciador de Tarefas. Até mais!")
