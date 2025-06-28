@@ -12,17 +12,16 @@ def adicionar_tarefa(tarefas, descricao):
 
 
 def listar_tarefas(tarefas):
-    """Lista todas as tarefas, mostrando o status (concluída ou pendente)."""
     print("\n--- Sua Lista de Tarefas ---")
     if not tarefas:
         print("Nenhuma tarefa na lista. Adicione uma!")
     else:
         for i, tarefa in enumerate(tarefas):
             status = "✅" if tarefa["concluida"] else "◻️"
-            # O 'i + 1' é para mostrar um índice amigável ao usuário (começando em 1)
-            print(f"{i + 1}. {status} {tarefa['descricao']}")
+            prioridade = tarefa["prioridade"]
+            print(f"{i + 1}. {status} {tarefa['descricao']} [Prioridade: {prioridade}]")
     print("--------------------------")
-
+    
 def marcar_como_concluida(tarefas, indice):
     """Marca uma tarefa como concluída com base no seu índice na lista."""
     # O índice do usuário começa em 1, mas o da lista em 0
