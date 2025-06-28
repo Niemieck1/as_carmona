@@ -45,13 +45,16 @@ def remover_tarefa(tarefas, indice):
         print("\n❌ Índice inválido. Por favor, escolha um número da lista.")
 
 def exibir_menu():
-    """Exibe o menu de opções para o usuário."""
-    print("\n--- MENU ---")
-    print("1. Adicionar Tarefa")
-    print("2. Listar Tarefas")
-    print("3. Marcar Tarefa como Concluída")
-    print("4. Remover Tarefa")
-    print("0. Sair")
+    print("\n---------------------")
+    print("     MENU DE OPÇÕES   ")
+    print("----------------------")
+    print("1  Adicionar Tarefa")
+    print("2  Listar Tarefas")
+    print("3  Marcar como Concluída")
+    print("4  Remover Tarefa")
+    print("0  Sair")
+    print("----------------------")
+
 
 def main():
     """Função principal que executa o loop do programa."""
